@@ -1,0 +1,27 @@
+p {
+    width: 50px;
+    height: 50px;
+    background-color: firebrick;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.transformed {
+    transform: scale(2);
+    transform-origin: 0 0;
+    margin-bottom: 120px;
+}
+
+.transformed-small {
+    transform: scale(.7);
+}
+
+.transformed-right {
+    transform: scaleY(2);
+    transform-origin: bottom;
+}
+
+.transformed-top {
+    transform: scaleX(2);
+    transform-origin: left;
+}
