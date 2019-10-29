@@ -1,0 +1,45 @@
+p {
+    width: 50px;
+    height: 50px;
+    background-color: cornflowerblue;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 50px;
+    text-align: center;
+}
+
+.bounce:hover {
+    transform: translateY(20px);
+    background-color: crimson;
+    transition: .5s cubic-bezier(0.455, 0.03, 0.515, -3);
+    /* transition-duration: .5s;
+    transition-timing-function: cubic-bezier(0.455, 0.03, 0.515, -3);
+    transition-property: all; */
+}
+
+.rotate:hover {
+    transform: rotate(1080deg);
+    background-color: indigo;
+    transition: transform 2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    /* transition-duration: 2s;
+    transition-property: transform;
+    transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55); */
+}
+
+.rotate-more:hover {
+    transform: translateX(200px);
+    background-color: brown;
+    transition: background-color 1s cubic-bezier(0.19, 1, 0.22, 1), 
+                transform 2s cubic-bezier(0.19, 1, 0.22, 1);
+    /* transition-duration: 1s, 2s;
+    transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+    transition-property: background-color, transform; */
+}
+
+.rotate-even-more:hover {
+    transform: rotate(250deg);
+    background-color: cadetblue;
+    transition: 2.5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    /* transition-duration: 2.5s;
+    transition-timing-function: cubic-bezier(0.6, -0.28, 0.735, 0.045); */
+}
