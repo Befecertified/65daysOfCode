@@ -5,11 +5,15 @@ p {
     color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 50px;
-    text-align: center;
+    text-align: center; 
+}
+
+.bounce, .rotate, .rotate-more, .rotate-even-more {
+    transition: all .5s linear;
 }
 
 .bounce:hover {
-    transform: translateY(20px);
+    transform: rotateX(1080deg);
     background-color: crimson;
     transition: .5s cubic-bezier(0.455, 0.03, 0.515, -3);
     /* transition-duration: .5s;
@@ -25,6 +29,10 @@ p {
     transition-property: transform;
     transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55); */
 }
+
+/* .rotate {
+    background-color: indigo;
+} */
 
 .rotate-more:hover {
     transform: translateX(200px);
