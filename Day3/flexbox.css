@@ -1,0 +1,44 @@
+.container {
+    border: 10px solid indianred;
+    font-size: 50px;
+    color: whitesmoke;
+    display: flex;
+    flex-direction: row;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 800px;
+    justify-content: space-evenly;
+}
+.box {
+    padding: 50px;
+    width: 100px;
+    /* height: 50px; */
+}
+.box1 {
+    background: mediumaquamarine;
+}
+.box2 {
+    background: burlywood;
+}
+.box3 {
+    background: coral;
+}
+.box4 {
+    background: darkcyan;
+}
+.box5 {
+    background: firebrick;
+}
+.box6 {
+    background: gold;
+}
+.box7 {
+    background: hotpink;
+}
+.box8 {
+    background: indigo;
+}
+.box9 {
+    background: mediumorchid;
+}
