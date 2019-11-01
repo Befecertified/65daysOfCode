@@ -1,0 +1,46 @@
+.container {
+    border: 10px solid indianred;
+    font-size: 50px;
+    color: whitesmoke;
+    display: flex;
+    flex-direction: row;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    flex-wrap: wrap;
+    height: 800px;
+    align-items: flex-start;
+    align-content: space-around;
+}
+.box {
+    padding: 50px;
+    width: 100px;
+    /* height: 50px; */
+}
+.box1 {
+    background: mediumaquamarine;
+}
+.box2 {
+    background: burlywood;
+    /* font-size: 70px; */
+}
+.box3 {
+    background: coral;
+}
+.box4 {
+    background: darkcyan;
+}
+.box5 {
+    background: firebrick;
+}
+.box6 {
+    background: gold;
+    /* font-size: 25px; */
+}
+.box7 {
+    background: hotpink;
+}
+.box8 {
+    background: indigo;
+}
+.box9 {
+    background: mediumorchid;
+}
