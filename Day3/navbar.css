@@ -10,10 +10,10 @@ a {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-decoration: none;
     font-size: 20px;
-    transition: color .5s ease-in;
 }
 
 a:hover {
+    transition: color .5s ease-in;
     color: firebrick;
 }
 
