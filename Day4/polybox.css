@@ -1,0 +1,24 @@
+body {
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.box {
+    background: crimson;
+    padding: 30px;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    flex: 1 1 200px;
+}
+
+.middle {
+    background: firebrick;
+}
+
+.box:hover {
+    transition: .2s linear;
+    background: rgb(155, 4, 34);
+    cursor: pointer;
+}
