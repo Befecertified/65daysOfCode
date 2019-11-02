@@ -1,14 +1,13 @@
+/* General Styles */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 body {
-    background: url('assets/img/main.jpg');
-    background-size: cover;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 16px;
-    color: white;
     display:flex;
     flex-direction: column;
 }
@@ -17,6 +16,38 @@ a {
     color: white;
     text-decoration: none;
 }
+
+h1 {
+    font-size: 3.8rem;
+    padding: 10px;
+}
+
+h2 {
+    font-size: 1.8rem;
+}
+
+h3 {
+    font-size: 1.6rem;
+    padding: 5px 10px 10px 10px;
+}
+
+hr {
+    background: #3f51b5;
+    height: 3px;
+    width: 250px;
+    border: 0;
+    margin-bottom: 50px;
+}
+
+p {
+    font-size: 1.05rem;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Header Section */
 
 header {
     position: absolute;
@@ -34,20 +65,17 @@ nav > a {
     font-size: 1.2rem;
 }
 
-h1 {
-    font-size: 3.8rem;
-    padding: 10px;
+@keyframes fadeIn {
+    100% {
+        opacity: 1;
+    }
 }
 
-h2 {
-    font-size: 1.7rem;
-}
-
-h3 {
-    font-size: 1.6rem;
-    padding: 5px 10px 10px 10px;
-    
-    /* margin-top: 100px; */
+/* Main View Section */
+#container {
+    background-size: cover;
+    color: white;
+    background: url('assets/img/main.jpg');
 }
 
 main {
@@ -61,6 +89,7 @@ main {
     margin-top: 8vh;
     opacity: 0;
     animation: slideIn 1s ease-out 1.6s 1 forwards;
+    position: relative;
 }
 
 button {
@@ -76,16 +105,75 @@ button {
     border-radius: 4px;
 }
 
-@keyframes fadeIn {
-    100% {
-        opacity: 1;
-    }
-}
-
 @keyframes slideIn {
     100% {
         opacity: 1;
         margin-top: 0;
         min-height: 100vh;
     }
+}
+
+/* Sections */
+
+/* Destinations Section */
+
+#destinations, #packages {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+}
+
+#destinations > p, #packages > p {
+    width: 60%;
+    text-align: center;
+    padding: 30px;
+    line-height: 150%;
+}
+
+.gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+li {
+    height: 350px;
+    padding: 20px;
+    background-size: cover;
+    background-clip: content-box;
+    background-position: center;
+}
+
+.pic {
+    flex-basis: 30%;
+}
+
+.pic-lg {
+    flex-basis: 70%;
+}
+
+/* Packages Section */
+
+#packages {
+    background: #f5f5f5;
+}
+
+.trips {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.trip {
+    padding: 70px;
+    flex: 0 1 50%;
+    text-align: center;
+}
+
+.trip > h2 {
+    padding: 30px;
 }
