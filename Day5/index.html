@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="container">
+    <main>
         <header>
             <h2>Mountain Travel</h2>
             <nav>
@@ -18,22 +18,22 @@
                 <a href="">Contact</a>
             </nav>
         </header>
-        <main>
+        <article id="welcome-content">
             <h1>Mountain Travel</h1>
             <h2>Unmissable Adventure Tours Around The World</h2>
             <button>Contact Us Now</button>
-        </main>    
-    </div>
+        </article>    
+    </main>
     
     <section id="destinations">
         <h2>Some of Our Destinations:</h2>
         <p>Tired of the ocean? Are the plains too plain? Come along with us on one of our mountain adventures. Here are some pictures from people who have had elevated experiences with us.</p>
         <hr>
         <ul class="gallery">
-            <li class="pic" style="background-image: url('assets/img/mountain1.jpg');"></li>
-            <li class="pic-lg" style="background-image: url('assets/img/mountain2.jpg');"></li>
-            <li class="pic-lg" style="background-image: url('assets/img/mountain3.jpg');"></li>
-            <li class="pic" style="background-image: url('assets/img/mountain4.jpg');"></li>
+            <li class="pic grid" style="background-image: url('assets/img/mountain1.jpg');"></li>
+            <li class="pic-lg grid" style="background-image: url('assets/img/mountain2.jpg');"></li>
+            <li class="pic-lg grid" style="background-image: url('assets/img/mountain3.jpg');"></li>
+            <li class="pic grid" style="background-image: url('assets/img/mountain4.jpg');"></li>
         </ul>
     </section>
 
@@ -41,7 +41,7 @@
         <h2>Tour Packages</h2>
         <p>We offer a variety of mountaineering packages. Whether you've climbed Everest or don't even know what a mountain is, we've got the perfect vacation for you.</p>
         <hr>
-        <section class="trips">
+        <div class="trips">
             <article class="trip">
                     <i class="fa fa-compass fa-4x"></i>
                     <h2>Guided Trips</h2>
@@ -62,7 +62,46 @@
                     <h2>Racing Trips</h2>
                     <p>Got a competitive spirit? Sign up for one of our mountain marathons! Try to reach the summit before anyone else.</p>
             </article>
-        </section>
+        </div>
     </section>
+    
+    <section id="testimonials">
+        <h2>Testimonials From Our Adventurers:</h2>
+        <hr>
+        <p class='testimony'>Wow! This tour made me realize how much I love mountains. After going on one of these tours, I can safely say that they are my favorite geographic feature, and my favorite word that starts with M.</p>
+        <p class="user"> - Colt Steele</p>
+        <p class='testimony'>I never understood why people cared so much about mountains. But then I went on one of these tours. Now I can't understand people who don't care about mountains!</p>
+        <p class="user"> - Elie Schoppik</p>
+        <p class='testimony'>If you want to understand the universe, head to the mountains. I mean, seriously. It's like, woah. You know? It's like that.</p>
+        <p class="user"> - Tim Garcia</p>
+    </section>
+
+    <section id="subscribe">
+        <h2>Learn More</h2>
+        <p>Want to know about our upcoming mountain-related events, or come to one of our mixers? Just sign up for our mailing list. No spam from us, we promise! Except for the spam we give you to keep up your energy while you're hiking through the mountains. We have tons of that.</p>
+        <hr>
+        <form class="subscribe-now">
+            <input type="email" name="email" id="email" placeholder="Email">
+            <button>Subscribe Now</button>            
+        </form>
+    </section>
+
+    <footer>
+        <p>IMAGES COURTESY OF <a href="https://www.unsplash.com">UNSPLASH</a>.</p>
+        <p>WHY ARE YOU EVEN READING THIS?! THERE'S NEVER ANYTHING INTERESTING IN THE FOOTER!</p>
+        <ul>
+            <li>
+                <a href="">
+                    <i class="fab fa-facebook-square fa-2x"></i>
+                </a>
+            </li>
+            <li>
+                <a href=""><i class="fab fa-twitter-square fa-2x"></i></a>
+            </li>
+            <li>
+                <a href=""><i class="fab fa-github-square fa-2x"></i></a>
+            </li>
+        </ul>
+    </footer>
 </body>
 </html>
