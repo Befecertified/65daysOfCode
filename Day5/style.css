@@ -43,56 +43,22 @@ p {
     font-size: 1.05rem;
 }
 
+@media (max-width: 800px) {
+    p {
+        font-size: 1rem;
+    }
+}
+
 ul {
     list-style: none;
 }
 
-/* Header Section */
-
-header {
-    position: absolute;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 30px 90px;
-    opacity: 0;
-    animation: fadeIn .5s linear 1s 1 forwards;
-}
-
-nav > a {
-    padding: 40px 15px;
-    font-size: 1.2rem;
-}
-
-@keyframes fadeIn {
-    100% {
-        opacity: 1;
-    }
-}
-
-/* Main View Section */
-#container {
-    background-size: cover;
-    color: white;
-    background: url('assets/img/main.jpg');
-}
-
-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    min-height: 92vh;
-    width: 100%;
-    margin-top: 8vh;
-    opacity: 0;
-    animation: slideIn 1s ease-out 1.6s 1 forwards;
-    position: relative;
+section:nth-of-type(even) {
+    background: #f5f5f5;
 }
 
 button {
+    cursor: pointer;
     background: #3f51b5;
     border: none;
     outline: none;
@@ -104,31 +70,110 @@ button {
     font-size: 1.1rem;
     border-radius: 4px;
 }
+/* Header Section */
+
+header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 30px 90px;
+    opacity: 0;
+    animation: fadeIn .5s linear .5s 1 forwards;
+}
+
+@media (max-width: 800px){
+    header {
+        flex-direction: column;
+    }
+    nav {
+        padding: 10px 0;
+    }
+}
+
+main h2 {
+    margin: 0 10px 10px 10px;
+}
+
+nav > a {
+    padding: 40px 15px;
+    font-size: 1.2rem;
+    opacity: .7;
+}
+
+nav > a:hover {
+    opacity: 1;
+    transition: opacity .5s ease-in;
+}
+
+@keyframes fadeIn {
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Main View Section */
+main {
+    background-size: cover;
+    color: white;
+    background: url('assets/img/main.jpg');
+    background-position: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+#welcome-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8vh;
+    min-height: 72vh;
+    opacity: 0;
+    animation: slideIn .8s ease-out 1s 1 forwards;
+}
 
 @keyframes slideIn {
     100% {
         opacity: 1;
         margin-top: 0;
-        min-height: 100vh;
+        min-height: 80vh;
     }
 }
 
-/* Sections */
+/* ========================================================================================================================================
+Sections
+========================================================================================================================================
+*/
 
 /* Destinations Section */
 
-#destinations, #packages {
+#destinations, #packages, #testimonials, #subscribe {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 50px;
 }
 
-#destinations > p, #packages > p {
+#destinations > p, #packages > p, #subscribe > p {
     width: 60%;
     text-align: center;
     padding: 30px;
     line-height: 150%;
+}
+
+@media (max-width: 800px){
+    #destinations > p, #packages > p, #subscribe > p {
+        width: 90%;
+        padding: 40px 20px;
+    }  
+
+    #destinations, #packages, #testimonials, #subscribe {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 50px 30px;
+    }    
 }
 
 .gallery {
@@ -139,7 +184,7 @@ button {
     margin-bottom: 50px;
 }
 
-li {
+li.grid {
     height: 350px;
     padding: 20px;
     background-size: cover;
@@ -155,12 +200,23 @@ li {
     flex-basis: 70%;
 }
 
-/* Packages Section */
+@media (max-width: 1100px){
+    .gallery {
+        margin-bottom: 0;
+    }
 
-#packages {
-    background: #f5f5f5;
+    .pic, .pic-lg {
+        flex-basis: 50%;
+    }
 }
 
+@media (max-width: 800px){
+    .pic, .pic-lg {
+        flex-basis: 100%;
+    }
+}
+
+/* Packages Section */
 .trips {
     display: flex;
     flex-direction: row;
@@ -174,6 +230,94 @@ li {
     text-align: center;
 }
 
+.trip .fa {
+    color: #3f51b5;
+}
+
 .trip > h2 {
     padding: 30px;
+}
+
+@media (max-width: 800px) {
+    .trip {
+        padding: 50px;
+        flex: 1 1 100%;
+    }
+
+    .trip > p {
+        width: 80%;
+        margin: 0 auto;
+        line-height: 180%;
+    }
+}
+/* Testimonials Section */
+#testimonials > h2 {
+    padding: 30px;
+}
+
+.testimony {
+    padding: 50px;
+    padding-bottom: 20px;
+    text-align: center;
+    max-width: 650px;
+    line-height: 130%;
+    font-size: 1.2rem;
+}
+
+/* Subscribe Section */
+form {
+    width: 100%;
+    text-align: center;
+}
+
+input {
+    width: 600px;
+    padding: 15px;
+    font-size: 1.2rem;
+}
+
+@media (max-width: 800px){
+    form button {
+    margin: 0;
+    margin-top: 10px;
+    }
+
+    input {
+        width: 90%;
+    }
+}
+
+/* Footer Section */
+
+footer {
+    background: #607d8b;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 0;
+}
+
+footer a, footer p {
+    color: #fff;
+    opacity: .7;
+}
+
+footer ul {
+    display: flex;
+}
+
+footer ul li {
+    margin-left: 15px;
+}
+
+@media (max-width: 800px){
+    footer {
+        flex-direction: column;
+    }
+
+    footer p, footer ul {
+        margin: 5px;
+    }
 }
