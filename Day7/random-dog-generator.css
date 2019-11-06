@@ -1,0 +1,19 @@
+body {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    align-items: center;
+}
+
+img {
+    padding: 20px;
+    max-height: 300px;
+}
+
+button {
+    background: dodgerblue;
+    width: 200px;
+    padding: 12px;
+    border: none;
+    cursor: pointer;
+}
