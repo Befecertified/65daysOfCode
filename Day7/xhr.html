@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>XHR Request</title>
+</head>
+<body>
+    <script>
+        var XHR = new XMLHttpRequest();
+
+        XHR.onreadystatechange = function(){
+            // if(XHR.readyState == 4 && XHR.status == 200){
+            //     console.log(XHR.responseText);
+            // } else {
+            //     console.log("Not Found");
+            // }
+            if(XHR.readyState == 4){
+                if(XHR.status == 200){
+                    console.log(XHR.responseText);
+                } else {
+                    console.log("Not Found");
+                }
+            }
+        }
+
+        XHR.open("GET", "https://api.github.com/zen");
+        XHR.send();
+    </script>
+</body>
+</html>
