@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fetch Error Handling</title>
+</head>
+<body>
+    
+
+    <script>
+        var url = "https://api.github.com/users/befecertified";
+
+        fetch(url)
+        .then((request) => {
+            if (!request.ok) throw Error(request.status);
+
+            return request;
+        })
+        .then((request) => {
+            console.log("It's working!!!");
+            console.log(request);
+        })
+        .catch((Error) => {
+            console.log("Not Working!!!: ", Error);
+        })
+    </script>
+</body>
+</html>
