@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: turquoise;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+main {
+    background: white;
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    border-radius: 10px;
+}
+
+section#data {
+    display: flex;
+    padding: 30px;
+    flex-direction: row;
+}
+
+#user-details {
+    padding: 10px 0 0 50px;
+}
+
+#avatar {
+    border-radius: 50%;
+    width: 140px;
+    height: 120px;
+}
+
+#name {
+    color: teal;
+    font-size: 32px;
+}
+
+#username {
+    padding: 8px 0 20px 0;
+    color: dodgerblue;
+    font-size: 20px;
+}
+
+#email, #city, h1 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+h1 {
+    padding: 20px;
+}
+
+footer {
+    background: teal;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-radius: 0  0 10px 10px;
+    cursor: pointer;
+}
+
+footer > p {
+    font-size: 32px;
+}
