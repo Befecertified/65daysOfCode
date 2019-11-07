@@ -1,0 +1,23 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>XHR Request</title>
+</head>
+<body>
+    <script>
+        var url = "https://api.coindesk.com/v1/bpi/currentprice.json";
+
+        fetch(url)
+        .then((response) => {
+            console.log(response);
+            return response.json();
+        })
+        .then((data) => {
+            console.log(data.bpi.USD.rate);
+        })
+
+    </script>
+</body>
+</html>
