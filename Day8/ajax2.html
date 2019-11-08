@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JQuery Ajax</title>
+    <script src="../assets/jquery-3.3.1.js"></script>
+</head>
+<body>
+    <button id="get">GET();</button>
+    <button id="post">POST();</button>
+    <button id="getJSON">GETJSON();</button>
+
+    <script>
+    
+        $("#get").click(() => {
+            $.get('https://api.github.com/users/befecertified')
+            .done((data) => {
+                console.log(data);
+            })
+            .fail(() => {
+                alert("FAILED!!!");
+            })
+        })
+
+        $("#post").click(() => {
+            $.post('https://api.github.com/users/befecertified', {name: "Baribefe Deekor", city: "Regina", Province: "Saskatchewan", Country: "Canada"})
+            .done((data) => {
+                console.log(data);
+            })
+            .fail(() => {
+                alert("ERROR!!!");
+            })
+        })
+
+        $("#getJSON").click(() => {
+            $.getJSON('https://api.github.com/users/befecertified')
+            .done((data) => {
+                console.log(data);
+            })
+            .fail(() => {
+                alert("PROBLEM WITH SERVER!!!");
+            })
+        })
+    
+    </script>
+</body>
+</html>
