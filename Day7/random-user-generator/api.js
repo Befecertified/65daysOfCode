@@ -26,11 +26,12 @@ btn.addEventListener("click", () => {
     .then((data) => {
         // console.log(data.results[0].name.first + " " + data.results[0].name.last);
 
-        var avatar = data.results[0].picture.medium;
-        var name = data.results[0].name.first + " " + data.results[0].name.last;
-        var username = data.results[0].login.username;
-        var email = data.results[0].email;
-        var city = data.results[0].location.city;
+        var results = data.results[0];
+        var avatar = results.picture.medium;
+        var name = results.name.first + " " + results.name.last;
+        var username = results.login.username;
+        var email = results.email;
+        var city = results.location.city;
 
         avatarPos.src = avatar;
         namePos.innerText = name;
