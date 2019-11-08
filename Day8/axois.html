@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AXIOS</title>
+    <script src="../assets/axios.min.js"></script>
+</head>
+<body>
+    
+    <script>
+    
+    axios.get("https://opentdb.com/api.php?amount=1")
+    .then(function(res){
+        console.log(res.data.results[0].question);
+    })
+    .catch(function(err){
+        if(err.response){
+            console.log(err.response, err.response.status)
+        } else if (err.request){
+            console.log(err.request)
+        } else console.log(err.message);
+    })
+    
+    </script>
+</body>
+</html>
