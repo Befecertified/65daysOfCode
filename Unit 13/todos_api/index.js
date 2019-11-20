@@ -5,6 +5,10 @@ var express = require('express'),
 var models = require('./models');
 var routes = require('./routes');
 
+
+app.use(express.json());
+app.use(express.urlencoded({extended: true}))
+
 app.get('/', (req, res) => {
     res.json(
         { message: "Working!!!" }
