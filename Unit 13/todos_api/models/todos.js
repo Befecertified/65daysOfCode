@@ -3,7 +3,7 @@ var mongoose = require('mongoose');
 var todoSchema = mongoose.Schema({
     name: {
         type: String,
-        required: 'Please Specify Activity Name'
+        required: 'Please Specify Name of Activity ToDo'
     },
     completed: {
         type: Boolean,
