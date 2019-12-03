@@ -5,14 +5,17 @@ var express = require('express'),
 var models = require('./models');
 var routes = require('./routes');
 
-
+//Enable Body Parsing
 app.use(express.json());
 app.use(express.urlencoded({extended: true}))
 
+//Enable Static Files
+app.use(express.static(__dirname + '/views'));
+app.use(express.static(__dirname + '/public'));
+// app.use(express.static(__dirname + '../../assets'));
+
 app.get('/', (req, res) => {
-    res.json(
-        { message: "Working!!!" }
-    );
+    res.sendFile('index.html');
 })
 
 app.use('/api/todos', routes);
